@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Nextgen Gardet Limited Technology</title>
+  <style>
+    :root{
+      --bg: #F3F5F7;
+      --card: #C5EAE4; /* mint */
+      --lilac: #DAB6F2; /* contact area */
+      --ink: #0F172A;
+      --muted: #64748B;
+      --primary: #5B21B6; /* purple */
+      --circle: #E6E6E6;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --radius: 22px;
+    }*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; color:var(--ink); background:var(--bg);
+}
+
+.wrap{max-width:1100px; margin:0 auto; padding:18px;}
+
+/* Header */
+.topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 6px 22px}
+.brand{font-weight:800; letter-spacing:.4px}
+.brand span{color:var(--primary)}
+
+/* HERO */
+.hero{
+  background:#fff; border-radius:var(--radius); box-shadow:var(--shadow); padding:20px; display:grid; grid-template-columns:1fr; gap:18px;
+}
+
+@media(min-width:880px){
+  .hero{grid-template-columns:1.05fr 1fr; align-items:center; padding:28px}
+}
+
+.profileCard{
+  background:var(--card); border-radius:16px; padding:16px; height:100%; display:flex; flex-direction:column; gap:14px;
+}
+
+.tagline{font-size:14px; color:var(--muted)}
+
+.avatar{
+  width:100%; max-width:260px; aspect-ratio:3/3.5; border-radius:12px; object-fit:cover; box-shadow:var(--shadow);
+}
+
+.role{font-style:italic; color:#9A4CAF; font-size:14px}
+
+/* Services circle */
+.services{ position:relative; display:grid; place-items:center; min-height:320px; }
+.circle{
+  width:min(92vw, 520px); height:min(92vw, 520px); background:var(--circle); border-radius:999px; display:grid; place-items:center; position:relative;
+}
+
+.circle h3{ position:absolute; top:30px; font-size:14px; color:#2D0A79; letter-spacing:.8px; font-weight:800; text-transform:uppercase; }
+.svc-list{ list-style:none; margin:0; padding:0; text-align:center; line-height:1.9; font-weight:800; }
+
+.cta{
+  margin-top:18px; display:inline-flex; align-items:center; gap:10px; background:#111827; color:#fff; border:0; border-radius:12px; padding:12px 16px; font-weight:700; cursor:pointer; box-shadow:var(--shadow);
+}
+.cta:active{transform:translateY(1px)}
+
+/* Contact section */
+.contact{
+  background:var(--lilac); margin-top:28px; border-radius:var(--radius); box-shadow:var(--shadow);
+}
+.contact-inner{ padding:26px 18px 36px }
+.contact h2{ font-family: "Playfair Display", serif; font-weight:600; font-size:clamp(22px, 3.5vw, 36px); text-align:center; font-style:italic; letter-spacing:.4px; margin:0 0 22px }
+
+.grid{ display:grid; grid-template-columns:1fr; gap:16px; max-width:850px; margin:0 auto }
+@media(min-width:640px){.grid{grid-template-columns:repeat(2, 1fr)}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(4, 1fr)}}
+
+.card{
+  background:#fff; border-radius:16px; padding:14px 14px; display:flex; align-items:center; gap:12px; box-shadow:var(--shadow);
+}
+.card strong{display:block}
+.card span{color:var(--muted); font-size:12px}
+.icon{width:30px; height:30px}
+
+/* Footer */
+footer{ text-align:center; color:var(--muted); font-size:12px; padding:22px 8px }
+a{ color:inherit; text-decoration:none }
+a:focus-visible, button:focus-visible{ outline:3px solid rgba(91,33,182,.35); outline-offset:3px }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">elie <span>design</span></div>
+      <nav style="font-size:14px; color:var(--muted)"><span>Home</span> · <span>Services</span> · <span>Contact</span></nav>
+    </header><section class="hero" aria-label="Hero">
+  <!-- Left: profile card -->
+  <div class="profileCard">
+    <div class="tagline">Nextgen gardet limited Technology</div>
+    <img class="avatar" src="images/crop3.jpg" />
+    <div class="role">ceo of the company</div>
+  </div>
+
+  <!-- Right: services big circle -->
+  <div class="services">
+    <div class="circle">
+      <h3>Our Services</h3>
+      <ul class="svc-list" aria-label="Services">
+        <li>ONLINE SERVICES</li>
+        <li>WEB DESIGN</li>
+        <li>SOFTWARE MAINTENANCE</li>
+      </ul>
+    </div>
+    <button class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">CLICK TO NEXT →</button>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact" aria-label="Contact">
+  <div class="contact-inner">
+    <h2>CONTACT ON ALL SOCIAL MEDIA</h2>
+    <div class="grid">
+
+      <a class="card" href="https://instagram.com/shukuruoff_" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="1.5"/><rect x="7" y="7" width="10" height="10" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        <div>
+          <strong>Instagram</strong>
+          <span>@shukuruoff_</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://x.com/ishimweelie012" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 3l18 18M21 3L3 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div>
+          <strong>X (Twitter)</strong>
+          <span>@ishimweelie012</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://wa.me/250787360199" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 22a9.6 9.6 0 0 1-4.9-1.3L3 21l.4-3.9A9.9 9.9 0 1 1 12 22Z" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 9.5c0 3 4 6 5.5 6 1.5 0 2-1 2.5-1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div>
+          <strong>WhatsApp</strong>
+          <span>+250 787 360 199</span>
+        </div>
+      </a>
+
+      <a class="card" href="mailto:elieishimwemigos@gmail.com">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 5h18v14H3z" stroke="currentColor" stroke-width="1.5"/><path d="M3 7l9 7 9-7" stroke="currentColor" stroke-width="1.5"/></svg>
+        <div>
+          <strong>Gmail</strong>
+          <span>elieishimwemigos@gmail.com</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="y"></span> Elie Design — Built with HTML & CSS</footer>
+
+  </div>  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script></body>
+</html>
